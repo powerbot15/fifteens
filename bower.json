@@ -1,0 +1,13 @@
+{
+  "name": "fifteens",
+  "version": "0.1.1",
+  "homepage": "https://github.com/powerbot15/fifteens",
+  "authors": [
+    "Oleh Kastornov <powerbot15@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jqueryui": "~1.10.4",
+    "jquery": "~2.1.0"
+  }
+}

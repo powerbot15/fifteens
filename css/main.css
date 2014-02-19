@@ -10,7 +10,6 @@ h1, h2{
     position: relative;
     width: 200px;
     height: 200px;
-    /*border-collapse: collapse;*/
     margin: 50px auto 50px auto;
     padding: 0;
 }
@@ -32,10 +31,11 @@ h1, h2{
     background-color: #79c9ec;
     color: #ffffff;
     font-weight: bold;
+    cursor: pointer;
 }
 .game-field td div:hover{
     border: 1px solid red;
-    cursor: pointer;
+
 }
 .win-inform{
     color: green;

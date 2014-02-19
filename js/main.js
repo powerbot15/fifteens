@@ -8,7 +8,7 @@ jQuery(function($){
             ui.draggable.css('top', '0px');
             ui.draggable.css('left', '0px');
         }
-    });
+    }).disableSelection();
 
     $('.game-field td').droppable({
         drop: function (e, ui) {
@@ -27,9 +27,9 @@ jQuery(function($){
             ui.draggable.appendTo(this);
             checkWin();
         }
-    }).disableSelection();
+    });
 
-    $('.game-field td>div').draggable({zIndex: 100}).disableSelection();
+    $('.game-field td>div').draggable({zIndex: 100});
 
     function prepareGameField(){
         var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],

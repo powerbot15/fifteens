@@ -50,7 +50,7 @@ jQuery(function($){
             if (currentState.eq(i).text() != i+1){return}
         }
 
-        $('.vin-inform').text('Yeah, You did it !!!');
+        $('.win-inform').text('Yeah, You did it !!!');
 
         currentState.draggable({disabled: true});
 

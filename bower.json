@@ -7,7 +7,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "jqueryui": "~1.10.4",
-    "jquery": "~2.1.0"
+      "jquery": "~2.1.0",
+      "jqueryui": "~1.10.4"
   }
 }

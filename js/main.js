@@ -17,9 +17,9 @@ jQuery(function($){
                 distanceY = Math.abs(ui.position.top);
 
             if ((td.children().length > 0) ||
-                (distanceX > 10) && (distanceY > 10) ||
-                (distanceX > 75) ||
-                (distanceY > 75)){
+                (distanceX > td.width()*0.5) && (distanceY > td.height()*0.5) ||
+                (distanceX > td.width()*1.5) ||
+                (distanceY > td.height()*1.5)){
                 ui.draggable.css('top', '0px');
                 ui.draggable.css('left', '0px');
                 return;

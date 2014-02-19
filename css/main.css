@@ -11,7 +11,7 @@ h1, h2{
     width: 200px;
     height: 200px;
     border-collapse: collapse;
-    margin: 150px auto 50px auto;
+    margin: 100px auto 50px auto;
     padding: 0;
 }
 .game-field td{
@@ -32,6 +32,10 @@ h1, h2{
     background-color: #79c9ec;
     color: #ffffff;
     font-weight: bold;
+}
+.game-field td div:hover{
+    border: 1px solid red;
+    cursor: pointer;
 }
 .vin-inform{
     color: green;

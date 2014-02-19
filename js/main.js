@@ -12,14 +12,14 @@ jQuery(function($){
 
     $('.game-field td').droppable({
         drop: function (e, ui) {
-            var td = $(this),
+            var numberCell = $(this),
                 distanceX = Math.abs(ui.position.left),
                 distanceY = Math.abs(ui.position.top);
 
-            if ((td.children().length > 0) ||
-                (distanceX > td.width()*0.5) && (distanceY > td.height()*0.5) ||
-                (distanceX > td.width()*1.5) ||
-                (distanceY > td.height()*1.5)){
+            if ((numberCell.children().length > 0) ||
+                (distanceX > numberCell.width()*0.5) && (distanceY > numberCell.height()*0.5) ||
+                (distanceX > numberCell.width()*1.5) ||
+                (distanceY > numberCell.height()*1.5)){
                 magnetTopLeft(ui);
                 return;
             }

@@ -20,13 +20,10 @@ jQuery(function($){
                 (distanceX > td.width()*0.5) && (distanceY > td.height()*0.5) ||
                 (distanceX > td.width()*1.5) ||
                 (distanceY > td.height()*1.5)){
-                ui.draggable.css('top', '0px');
-                ui.draggable.css('left', '0px');
+                magnetTopLeft(ui);
                 return;
             }
-
-            ui.draggable.css('top', '0px');
-            ui.draggable.css('left', '0px');
+            magnetTopLeft(ui);
             ui.draggable.appendTo(this);
             checkWin();
         }
@@ -61,6 +58,13 @@ jQuery(function($){
 
 });
 //region =================Utils======================
+function magnetTopLeft(ui){
+
+    ui.draggable.css('top', '0px');
+    ui.draggable.css('left', '0px');
+
+
+}
 (function setShuffleMethod(){
     Array.prototype.shuffle = function(){
 

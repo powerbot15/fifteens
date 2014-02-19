@@ -11,7 +11,7 @@ h1, h2{
     width: 200px;
     height: 200px;
     border-collapse: collapse;
-    margin: 100px auto 50px auto;
+    margin: 50px auto 50px auto;
     padding: 0;
 }
 .game-field td{
@@ -37,7 +37,7 @@ h1, h2{
     border: 1px solid red;
     cursor: pointer;
 }
-.vin-inform{
+.win-inform{
     color: green;
     text-align: center;
     font-size: 18pt;

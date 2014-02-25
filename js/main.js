@@ -1,36 +1,31 @@
 
-jQuery(function($){
+jQuery( function prepareGameField($){
 
-    (function prepareGameField(){
+        var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].shuffle(),
+            $numberGameElement = $('.number').draggable({zIndex: 100});
 
-        var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-            gameField = $('.game-field td>div').draggable({zIndex: 100});
-
-        values = values.shuffle();
-
-        for( var i = 0; i < gameField.length; i++){
-            gameField.eq(i).text(values[i]);
+        for( var i = 0; i < $numberGameElement.length; i++){
+            $numberGameElement.eq(i).text(values[i]);
         }
 
         var stepCount = 0;
 
         $('body').droppable({
             drop: function(e, ui){
-                ui.draggable.css('top', '0px');
-                ui.draggable.css('left', '0px');
+                magnetTopLeft(ui);
             }
         }).disableSelection();
 
-        $('.game-field td').droppable({
+        $('.game-field-cell').droppable({
             drop: function (e, ui) {
-                var numberCell = $(this),
+                var $numberCell = $(this),
                     distanceX = Math.abs(ui.position.left),
                     distanceY = Math.abs(ui.position.top);
 
-                if ((numberCell.children().length > 0) ||
-                    (distanceX > numberCell.width() * 0.5) && (distanceY > numberCell.height() * 0.5) ||
-                    (distanceX > numberCell.width() * 1.5) ||
-                    (distanceY > numberCell.height() * 1.5)){
+                if (($numberCell.children().length > 0) ||
+                    (distanceX > $numberCell.width() * 0.5) && (distanceY > $numberCell.height() * 0.5) ||
+                    (distanceX > $numberCell.width() * 1.5) ||
+                    (distanceY > $numberCell.height() * 1.5)){
                     magnetTopLeft(ui);
                     return;
                 }
@@ -38,7 +33,7 @@ jQuery(function($){
                 magnetTopLeft(ui);
                 ui.draggable.appendTo(this);
                 stepCount++;
-                checkWin(gameField);
+                checkWin($numberGameElement);
             }
         });
 
@@ -54,7 +49,7 @@ jQuery(function($){
 
         }
 
-    })();
+
 
 });
 //region =================Utils======================
